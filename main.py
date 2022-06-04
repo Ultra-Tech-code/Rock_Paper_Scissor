@@ -7,12 +7,12 @@ print("Rules of the Game are as follows: \nROCK v/s PAPER = PAPER wins \nPAPER v
 while True:
     print("Enter  \n R for Rock \n P for Paper \n S for Scissor \n")
     # take the input from user
-    user_input = input("User Turn:")
+    user_input = input("Player Turn:")
     user_input = user_input.upper()
 
     # checking if user enter valid input
     while (user_input != "P") and (user_input != "S") and (user_input != "R"):
-        user_input = input("Enter Valid Input: ")
+        user_input = input("ERROR,Invalid Input \nEnter Valid Input: ")
         user_input = user_input.upper()
 
     # Equating the user_input to its right value
@@ -24,7 +24,7 @@ while True:
         user_input_value = 'Scissor'
 
     # print user input
-    print("User Input is: " + user_input_value)
+    print("Player Input is:" + user_input_value)
 
     # Computer chooses randomly from the game_input list
     print("\nComputer Turn:")
@@ -44,11 +44,11 @@ while True:
         comp_input_value = 'Scissor'
 
     # print computer input
-    print("Computer Input is: " + comp_input_value)
+    print("CPU Input is: " + comp_input_value)
 
     print("\n-----------RESULT--------------")
 
-    print(user_input_value + " V/S " + comp_input_value)
+    print(f"Player{(user_input_value)} + " : " + f"CPU{(comp_input_value)})
 
     # condition for winning
     if ((user_input == "R" and comp_input == "P") or
@@ -68,7 +68,7 @@ while True:
     if result == user_input_value:
         print("|==| USER WINS |==| \U0001F600")
     else:
-        print("|==| COMPUTER WINS |==| \U0001F612")
+        print("|==| CPU WINS |==| \U0001F612")
 
     # checking if user wants to play again
     print("Do you want to play again? (Y/N)")
