@@ -48,7 +48,7 @@ while True:
 
     print("\n-----------RESULT--------------")
 
-    print(f"Player{(user_input_value)} + " : " + f"CPU{(comp_input_value)})
+    print(f"Player({user_input_value})" + " : " + f"CPU({comp_input_value})")
 
     # condition for winning
     if ((user_input == "R" and comp_input == "P") or
